@@ -1,0 +1,76 @@
+</dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.2.0.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.5.Final</version>
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-annotations</artifactId>
+    <version>3.5.6-Final</version>
+</dependency>
+
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.10.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>2.5.0</version>
+</dependency>
+
+  </dependencies>
+C:\Users\ktrivedi\.m2\repository\org\mariadb\jdbc\mariadb-java-client\2.5.0\mariadb-java-client-2.5.0-sources.jar
+C:\Users\ktrivedi\.m2\repository\org/hibernate\hibernate-core\5.4.5.Final\hibernate-core-5.4.5.Final-sources.jar
+C:\Users\ktrivedi\.m2\repository\org\hibernate\hibernate-annotations\3.5.6-Final\hibernate-annotations-3.5.6-Final-sources.jar
+C:/Users/vvenkataraman/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final-sources.jar
+
+Created two projects
+1. created a dynamic web project (EmployeePortal) - converted to maven and added the above dependencies in pom.xml.
+2. created a java project EmployeeEntities.
+Added the above jars to classpath.
+moved to hibernate perspective
+right click add configuration
+add the mariadb jar to classpath.
+select options tab and change the db to mysql5(innodb).
+in the main tab select project = employeeentirties
+database connections- new 
+in new driver add external jar - mariadb
+properties tab- 
+Connection url- jbdc local host 3306
+driver class- org.mariadb.jdbc.driver.
+
+------------------------------------------------------------------------------
+
+DEPENDENCIES
+	SPRING CORE
+	SPRING MVC
+	MARIADB
+	HIBERNATE
+	
+
+Hibernate Core
+C:/Users/ktrivedi/.m2/repository/org/hibernate/hibernate-core/5.4.5.Final/hibernate-core-5.4.5.Final-sources.jar
+
+Hibernate Annotations
+C:/Users/ktrivedi/.m2/repository/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final-sources.jar
+
+Hibernate Commons Annotations
+C:/Users/ktrivedi/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final-sources.jar
+
+MariaDB
+C:/Users/ktrivedi/.m2/repository/org/mariadb/jdbc/mariadb-java-client/2.5.0/mariadb-java-client-2.5.0-sources.jar
+
+
+jdbc:mariadb://localhost:3306/employee

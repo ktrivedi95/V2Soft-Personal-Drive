@@ -1,0 +1,6 @@
+FULL EMPLOYEE LIST
+	http://localhost:8080/EmployeePortal/getEmployeeList
+
+GET EMPLOYEE BY ID
+	http://localhost:8080/EmployeePortal/getEmployeeById/111
+

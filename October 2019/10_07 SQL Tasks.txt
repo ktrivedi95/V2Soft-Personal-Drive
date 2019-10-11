@@ -1,0 +1,28 @@
+1. QUERY TO SELECT EMPLOYEE BY ID
+	SELECT * FROM employee_info
+	WHERE employee_id = '222';
+
+2. QUERY TO SELECT EMPLOYEE BY LAST NAME & FIRST NAME
+	SELECT * FROM employee_info
+	WHERE first_name = 'Kishan' AND last_name = 'Trivedi';
+
+3. QUERY TO SELECT EMPLOYEE BY SSN NUMBER
+	SELECT * FROM employee_info
+	WHERE ssn = '23456789';
+
+4. GIVEN EMPLOYEE ID & ADRESS TYPE, QUERY FOR EMPLOYEE ADDRESS
+	Ans: SELECT * FROM employee_address
+	WHERE employee_id = '111' AND address_type_id =
+	(SELECT id FROM address_type WHERE type = 'current');
+
+5. QUERY USING (LEFT OUTER JOIN) SELECT EMPLOYEE & ALL ADDRESSES OF THAT EMPLOYEE GIVEN THE SSN
+	SELECT address_line_one, address_line_two FROM employee_address ea
+	LEFT JOIN employee_info ei
+	ON ea.employee_id = ei.employee_id
+	WHERE ei.ssn = '12345678';
+
+6. QUERY USING (RIGHT OUTER JOIN)
+	
+
+7. QUERY USING (INNER JOIN)
+
