@@ -1,0 +1,18 @@
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('111', 'John', 'Smith', 'Mary', '2019-10-07', 'qwerty', '12345678');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('222', 'Kishan', 'Trivedi', 'P', '1995-11-11', 'k7070016', '23456789');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('333', 'Matt', 'Mac', 'A', '1960-01-09', 'adsgsd', '34567890');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('444', 'Xyz', 'Abc', 'F', '2010-04-20', 'fdfhfd', '45678901');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('555', 'Pdijn', 'Jddsa', 'L', '1998-12-02', 'kjsdgf', '56789012');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('666', 'SQL', 'Query', 'Y', '1973-05-03', 'jksndkg', '67890123');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('777', 'Jin', 'Froth', 'Q', '1960-03-23', 'jitkesf', '78901234');
+
+SELECT * FROM employee_info;
+
+INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (2, '222', '8131 Newburgh Road', 'Apt#304', 'Westland', 'Michigan', '48185', '1166');
+INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (1, '222', '300 Enterprise', 'Suite 200', 'Bloomfield Hills', 'Michigan', '48203', '4356');
+INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (1, '111', 'ajksfnskjd', 'jikg', 'Livonia', 'Michigan', '48894', '4312');
+INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (2, '333', 'kfjdgkdjfk', 'urewhtuyer', 'Canton', 'Michigan', '48134', '7685');
+INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (1, '444', 'zjxnbvzmccx', 'qdvghyuf', 'Livonia', 'Michigan', '48894', '1234');
+INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (2, '444', 'hajkdfsklsa', 'rvtrgbyi', 'Detroit', 'Michigan', '43295', '8796');
+
+SELECT * FROM employee_address;
