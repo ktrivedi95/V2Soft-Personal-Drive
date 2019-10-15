@@ -55,3 +55,12 @@ clear
 git add .
 git commit -m "Employee Portal Commit 4"
 git push origin master -f
+git add .
+git remote -v
+git commit -m "10_14 commit"
+git push origin master -f
+git add .
+git commit -m "Employee Portal Commit 5"
+git remote -v
+git push origin master -f
+git commit https://github.com/hellokoding/hellokoding-courses.git

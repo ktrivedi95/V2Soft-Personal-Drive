@@ -16,3 +16,23 @@ INSERT INTO employee_address (address_type_id, employee_id, address_line_one, ad
 INSERT INTO employee_address (address_type_id, employee_id, address_line_one, address_line_two, city, state, zipcode, zipfour) VALUES (2, '444', 'hajkdfsklsa', 'rvtrgbyi', 'Detroit', 'Michigan', '43295', '8796');
 
 SELECT * FROM employee_address;
+
+
+INSERT INTO employee_login (employee_id, username, password) VALUES ('111', 'johns', 'johns');
+INSERT INTO employee_login (employee_id, username, password) VALUES ('222', 'ktrivedi', 'ktrivedi');
+INSERT INTO employee_login (employee_id, username, password) VALUES ('333', 'matt', 'matt');
+INSERT INTO employee_login (employee_id, username, password) VALUES ('444', 'xyz', 'xyz');
+INSERT INTO employee_login (employee_id, username, password) VALUES ('666', 'sql', 'sql');
+
+SELECT * FROM employee_login;
+
+INSERT INTO login_session (username) VALUES ('johns');
+INSERT INTO login_session (username) VALUES ('ktrivedi');
+INSERT INTO login_session (username) VALUES ('matt');
+INSERT INTO login_session (username) VALUES ('xyz');
+INSERT INTO login_session (username) VALUES ('sql');
+
+SELECT * FROM login_session;
+
+
+
