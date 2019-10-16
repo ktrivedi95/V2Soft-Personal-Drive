@@ -64,3 +64,16 @@ git commit -m "Employee Portal Commit 5"
 git remote -v
 git push origin master -f
 git commit https://github.com/hellokoding/hellokoding-courses.git
+git add .
+git commit -m "10_15 commit"
+git remote -v
+git push origin master -f
+clear
+exit
+git remote -v
+clear
+git add .
+git commit -m "Employee Portal Commit 6"
+git push origin master -f
+clear
+exit
