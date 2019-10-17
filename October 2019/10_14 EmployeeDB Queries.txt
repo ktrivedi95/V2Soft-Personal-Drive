@@ -5,6 +5,9 @@ INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date
 INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('555', 'Pdijn', 'Jddsa', 'L', '1998-12-02', 'kjsdgf', '56789012');
 INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('666', 'SQL', 'Query', 'Y', '1973-05-03', 'jksndkg', '67890123');
 INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('777', 'Jin', 'Froth', 'Q', '1960-03-23', 'jitkesf', '78901234');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('888', 'John', 'MacDonald', 'P', '1955-01-02', 'orekmgr', '89012345');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('999', 'John', 'Spur', 'P', '1989-07-23', 'mgjllg', '90123456');
+INSERT INTO employee_info (employee_id, first_name, last_name, middle_name, date_of_birth, passport_number, ssn) VALUES ('000', 'John', 'Michael', 'A', '2000-05-13', 'plrhas', '01234567');
 
 SELECT * FROM employee_info;
 

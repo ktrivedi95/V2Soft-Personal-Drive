@@ -77,3 +77,34 @@ git commit -m "Employee Portal Commit 6"
 git push origin master -f
 clear
 exit
+git remote -v
+git add .
+git commit -m "Third Commit"
+git push origin master -f
+clear
+git remote -v
+git add .
+git commit -m "Employee Portal Commit 9"
+git remote -v
+git push origin master -f
+clear
+ls
+clear
+git add .
+git commit -m "Employee Portal Commit 7"
+clear
+git remote -v
+git push origin master -f
+clear
+git remote -v
+git add .
+git commit -m "Employee Portal Commit 8"
+git push origin master -f
+clear
+git remote -v
+git add .
+git commit -m "Search Employees By Attributes Works!"
+clear
+git remote -v
+git push origin master -f
+clear
