@@ -108,3 +108,21 @@ clear
 git remote -v
 git push origin master -f
 clear
+git remote -v
+git add .
+git commit -m "Forth Commit"
+git remote -v
+git push origin master -f
+clear
+git add .
+git commit -m "Servlet Filter Part 1"
+git remote -v
+git push origin master -f
+clea
+clear
+exit
+git remote -v
+git add .
+git commit -m "Servlet Filter Works"
+git remote -v
+git push origin master -f
