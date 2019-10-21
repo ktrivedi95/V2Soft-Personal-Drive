@@ -1,0 +1,14 @@
+10/14:
+	Created 2 more tables called employee_login & login_session; Populated the tables with appropriate data relating the other tables
+	Created basic jsp view pages for login, welcome, view employee list etc.
+10/15:
+	Reconfigured the Hibernate configuration and generated new datamodels that included employee login information as well
+		Updated the current models with new attributes
+10/16:
+	Created DAO and Controller methods for login processes and to view different pages once successfully logged in
+		Queries ran by 3 different methods: SQL queries, CriteriaBuilder queries, and Hibernate Query Language (HQL)
+10/17:
+	Continued working on different styles of queries (encountered a few errors and bugs on the way but resolved most of them by the help of Bharthesh and StackoverFlow)
+	Read through articles on how HTTPResponse and HTTPRequest works and how to pass information between jsp pages using headers and cookies
+10/18:
+	Worked on creating a Web Servlet Filter to restrict access to all the web pages unless a valid login session id is present and the status of the session is active (not terminated)

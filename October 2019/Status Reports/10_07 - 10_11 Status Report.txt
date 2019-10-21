@@ -1,0 +1,15 @@
+10/07:
+	Downloaded and installed all necessary software required for the environment setup (Java JDK, Git, Spring Tool Suite [STS] IDE, Gradle, Spring CLI, MariaDB, Apache Tomcat Server, NodeJS, Angular CLI, Visual Studio Code IDE)
+	Tested the environment by creating a ‘Hello World’ Spring started project
+10/08:
+	Downloaded HeidiSQL for MariaDB and created a sample database called Employee
+		Inside the DB, created 3 new tables, assigned appropriate key constraints, and populated sample data
+		Received and completed SQL query task from Bharthesh to retrieve data from the Employee DB
+	End of day, started to setup the configuration for Hibernate in STS
+10/09:
+	Completed a Java Spring course on udemy.com and learned different concepts in Spring such as Dependency Injection, Java/XML Configuration, MVC, MVC Test, and JPA
+10/10:
+	Continued with Day 2’s Hibernate configuration, created a successful connection to the Employee DB, and developed the model and entity classes.
+		Also began creating DAO and Controller classes to use the models and entity classes to capture the sample data from the DB
+10/11:
+	Continued with DAO and controller to add further features such as adding new employees to the DB and updating current employees’ information

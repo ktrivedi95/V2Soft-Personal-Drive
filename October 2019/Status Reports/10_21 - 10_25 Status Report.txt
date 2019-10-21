@@ -1,0 +1,15 @@
+10/21:
+	Developed Servlet Filter to allow accessing pages only when an login session exists in the Database
+	Developed a Logging out functionality that terminates current session and marks the appropriate columns in the Database
+	Learned basics of Spring Boot from a 3 hour crash course on youtube
+10/22:
+	Reconfigured the Hibernate configuration and generated new datamodels that included employee login information as well
+		Updated the current models with new attributes
+10/23:
+	Created DAO and Controller methods for login processes and to view different pages once successfully logged in
+		Queries ran by 3 different methods: SQL queries, CriteriaBuilder queries, and Hibernate Query Language (HQL)
+10/24:
+	Continued working on different styles of queries (encountered a few errors and bugs on the way but resolved most of them by the help of Bharthesh and StackoverFlow)
+	Read through articles on how HTTPResponse and HTTPRequest works and how to pass information between jsp pages using headers and cookies
+10/25:
+	Worked on creating a Web Servlet Filter to restrict access to all the web pages unless a valid login session id is present and the status of the session is active (not terminated)
