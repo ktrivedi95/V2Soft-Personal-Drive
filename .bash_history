@@ -126,3 +126,13 @@ git add .
 git commit -m "Servlet Filter Works"
 git remote -v
 git push origin master -f
+git remote -v
+git add .
+git commit -m "No updates 10_18"
+git push origin master -f
+git remote -v
+git add ,
+git add .
+git commit -m "Servlet Filter and Logout working"
+git remote -v
+git push origin master -f
