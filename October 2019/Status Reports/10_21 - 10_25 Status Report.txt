@@ -1,7 +1,7 @@
 10/21:
 	Developed Servlet Filter to allow accessing pages only when an login session exists in the Database
 	Developed a Logging out functionality that terminates current session and marks the appropriate columns in the Database
-	Learned basics of Spring Boot from a 3 hour crash course on youtube
+	Began learning the basics of Spring Boot from a crash course on youtube
 10/22:
 	Reconfigured the Hibernate configuration and generated new datamodels that included employee login information as well
 		Updated the current models with new attributes

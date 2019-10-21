@@ -140,3 +140,29 @@ git remote -v
 git add .
 git commit -m "Added List"
 git push origin master -f
+git remote -v
+clear
+git add .
+git commit -m "Status Reports"
+git push origin master -f
+clear
+git clone https://github.com/spring-guides/gs-spring-boot.git
+git remote -v
+git init
+git remote -v
+clear
+git remote add origin https://github.com/ktrivedi95/V2Soft_Spring_Boot.git
+git remote -v
+clear
+git add .
+cd gs-spring-boot/
+clear
+git init
+git remote -v
+clear
+git remote add myorigin https://github.com/ktrivedi95/V2Soft_Spring_Boot.git
+git remote -v
+git add .
+git commit -m "Initial Commit"
+git push myorigin master -f
+clear
