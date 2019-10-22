@@ -3,8 +3,9 @@
 	Developed a Logging out functionality that terminates current session and marks the appropriate columns in the Database
 	Began learning the basics of Spring Boot from a crash course on youtube
 10/22:
-	Reconfigured the Hibernate configuration and generated new datamodels that included employee login information as well
-		Updated the current models with new attributes
+	Further learned Spring Boot by completing 2 more tutorial courses on youtube
+	Downloaded some Spring Boot apps to test and learn the differences between them and vanilla Maven projects
+	Began converting our EmployeePortal project from a Maven build to a Spring Boot web application
 10/23:
 	Created DAO and Controller methods for login processes and to view different pages once successfully logged in
 		Queries ran by 3 different methods: SQL queries, CriteriaBuilder queries, and Hibernate Query Language (HQL)

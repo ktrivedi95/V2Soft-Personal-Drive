@@ -166,3 +166,7 @@ git add .
 git commit -m "Initial Commit"
 git push myorigin master -f
 clear
+git remote -v
+git add .
+git commit -m "Status Reports Update"
+git push origin master -f
