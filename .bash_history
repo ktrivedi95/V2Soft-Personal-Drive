@@ -170,3 +170,25 @@ git remote -v
 git add .
 git commit -m "Status Reports Update"
 git push origin master -f
+git remote -v
+git add .
+git commit -m "Status Reports Update"
+git push origin master -f
+git remote -v
+git remote add origin https://github.com/ktrivedi95/V2Soft_Spring_Training.git
+git init
+git remote add origin https://github.com/ktrivedi95/V2Soft_Spring_Training.git
+clear
+git remote -v
+git add .
+git commit -m "EmployeePortal Spring Boot"
+clear
+git push origin master -f
+git remote -v
+git add .
+git commit -m "Spring Boot Conversion Successful"
+cler
+clear
+git remote -v
+git push origin master -f
+clear

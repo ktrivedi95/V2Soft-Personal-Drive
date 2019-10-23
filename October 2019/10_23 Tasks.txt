@@ -1,0 +1,7 @@
+WSDL file
+	Try to understand what is in the file
+Download Apache CXF
+Implement the server side skeleton
+	SOAP
+
+Compile WSDL to Java using CXF and make the call from SOAP UI

@@ -1,0 +1,13 @@
+Receieve a notification (either on the phone screen or in the App itself) when an event invitation is received
+	Maybe a simple bubble over the 'Invited Events' Button with the number of invitations that are still pending
+
+Display in Invitation (checkbox for phone) does not check for a valid phone number or any phone number
+	As of now, I can click on the checkbox and proceed to next step without entering a phone number
+
+Deleting Guests from the Add Invitees page and then clicking Home does not persist the changes
+	The guests are back on the list
+
+Choosing from a list, it doesn't close the list even after clicking on the choice
+
+Can an event be more than one day long?
+	On the phone, the event says it has to end on the same day that it is held
