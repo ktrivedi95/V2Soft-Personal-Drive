@@ -192,3 +192,7 @@ clear
 git remote -v
 git push origin master -f
 clear
+git remote -v
+git add .
+git commit -m "10_23 Tasks"
+git push origin master -f
