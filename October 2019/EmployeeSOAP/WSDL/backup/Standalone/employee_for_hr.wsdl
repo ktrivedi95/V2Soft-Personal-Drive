@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://localhost:8080/EmployeeForHr"
+	xmlns:x1="http://localhost:8080/EmployeeForHr/types"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	name="EmployeeForHr"
+	targetNamespace="http://localhost:8080/EmployeeForHr">
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema"
+			xmlns:x1="http://localhost:8080/EmployeeForHr/types"
+			targetNamespace="http://localhost:8080/EmployeeForHr/types"
+			elementFormDefault="qualified">
+            <simpleType name="String30">
+                <restriction base="string">
+                    <maxLength value="30"/>
+                </restriction>
+            </simpleType>
+			<simpleType name="String10">
+                <restriction base="string">
+                    <maxLength value="10"/>
+                </restriction>
+            </simpleType>
+			<complexType name="Employee">
+				<sequence>
+					<element name="FirstName" type="x1:String30"/>
+					<element name="LastName" type="x1:String30"/>
+					<element name="DateOfBirth" type="x1:String10"/>
+					<element name="EmployeeId" type="x1:String10"/>
+				</sequence>
+			</complexType>
+            <element name="CreateEmployeeRequest" type="x1:Employee"/>
+            <element name="CreateEmployeeResponse" type="x1:Employee"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="createEmployeeRequest">
+        <wsdl:part element="x1:CreateEmployeeRequest" name="in"/>
+    </wsdl:message>
+    <wsdl:message name="createEmployeeResponse">
+        <wsdl:part element="x1:CreateEmployeeResponse" name="out"/>
+    </wsdl:message>
+    <wsdl:portType name="EmployeeForHr">
+        <wsdl:operation name="createEmployee">
+            <wsdl:input name="createEmployeeRequest" message="tns:createEmployeeRequest"/>
+            <wsdl:output name="createEmployeeResponse" message="tns:createEmployeeResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="EmployeeForHr_SOAPBinding" type="tns:EmployeeForHr">
+        <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" style="document"/>
+        <operation name="createEmployee">
+            <soap12:operation style="document" soapAction=""/>
+            <input>
+                <soap12:body use="createEmployeeRequest"/>
+            </input>
+            <output>
+                <soap12:body use="createEmployeeResponse"/>
+            </output>
+        </operation>
+    </wsdl:binding>
+    <wsdl:service name="EmployeeForHrService">
+        <wsdl:port name="EmployeeForHrPort" binding="tns:EmployeeForHr_SOAPBinding">
+            <soap12:address location="http://localhost:8080/EmployeeForHr"/>
+        </wsdl:port>
+    </wsdl:service>
+</definitions>

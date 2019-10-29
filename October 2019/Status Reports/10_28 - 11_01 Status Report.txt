@@ -1,0 +1,22 @@
+10/28:
+	Learned how to use SoapUI application by watching sample project creations on youtube
+	Began Implementing Employee WSDL into SoapUI and generating sample code for java
+	Practiced programming in core java to revisit some of the basic concepts in the language
+10/29:
+	Further learned Spring Boot by completing 2 more tutorial courses on youtube
+	Downloaded some Spring Boot apps to test and learn the differences between them and vanilla Maven projects
+	Began converting our EmployeePortal project from a Maven build to a Spring Boot web application
+10/30:
+	Successfully converted EmployeePortal project to EmployeePortalBoot (Spring Boot) project
+		Fixed all errors and bugs related to beans by adding the appropriate properties in the application.properties file
+		Updated queries for logout and retrieving login session information since they resulted in false outputs during random executions
+	Assisted in the Qwik Events Mobile App production and demo testing
+10/31:
+	Began learning SOAP Web Services through a series of tutorials online
+	Further assisted in the Qwik Events Mobile App production and demo testing by keeping notes of each bug/error to fix
+11/01:
+	Completed SOAP Web Services series and tested sample WSDL and Java code provided by the instructor
+	Began preparing for Coding Test from RouteOne
+		Learned several new concepts of ECMAScript 6 compared to ES5 and played around with sample code
+		Solved several common coding problems found over multiple websites using both Java and ES6 to increase familiarity with the 2 languages
+

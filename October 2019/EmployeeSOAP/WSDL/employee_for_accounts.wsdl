@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://localhost:8080/types"
+	xmlns:tns="http://localhost:8080"
+	xmlns:s="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	name="EmployeeForHr"
+	targetNamespace="http://localhost:8080">
+    <types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://localhost:8080/types">
+			<s:include schemaLocation="xsd/employee.xsd" />
+		</s:schema>
+    </types>
+    <message name="updateEmployeeSalaryRequest">
+        <part element="xsd:UpdateEmployeeSalaryRequest" name="in"/>
+    </message>
+    <message name="updateEmployeeSalaryResponse">
+        <part element="xsd:UpdateEmployeeSalaryResponse" name="out"/>
+    </message>
+    <portType name="EmployeeForAccounts">
+        <operation name="updateEmployeeSalary">
+            <input name="updateEmployeeSalaryRequest" message="tns:updateEmployeeSalaryRequest"/>
+            <output name="updateEmployeeSalaryResponse" message="tns:updateEmployeeSalaryResponse"/>
+        </operation>
+    </portType>
+    <binding name="EmployeeForAccounts_SOAPBinding" type="tns:EmployeeForAccounts">
+        <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" style="document"/>
+        <operation name="updateEmployeeSalary">
+            <soap12:operation style="document" soapAction=""/>
+            <input>
+                <soap12:body use="literal"/>
+            </input>
+            <output>
+                <soap12:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="EmployeeForAccountsService">
+        <port name="EmployeeForAccountsPort" binding="tns:EmployeeForAccounts_SOAPBinding">
+            <soap12:address location="http://localhost:8080/EmployeeForAccounts"/>
+        </port>
+    </service>
+</definitions>

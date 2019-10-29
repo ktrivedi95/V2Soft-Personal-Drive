@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="88567f7a-6719-4a31-9833-e102693db00c" activeEnvironment="Default" name="EmployeeForHr3" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="8b181696-f3cd-46fc-a79a-8259284853c8" wsaVersion="NONE" name="EmployeeForHr_SOAPBinding" type="wsdl" bindingName="{http://localhost:8080}EmployeeForHr_SOAPBinding" soapVersion="1_2" anonymous="optional" definition="file:/C:/Bari/Training/EmployeeSOAP/WSDL3/employee_for_hr.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Bari\Training\EmployeeSOAP\WSDL3\employee_for_hr.wsdl"><con:part><con:url>file:\C:\Bari\Training\EmployeeSOAP\WSDL3\employee_for_hr.wsdl</con:url><con:content><![CDATA[<definitions name="EmployeeForHr" targetNamespace="http://localhost:8080" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://localhost:8080/types" xmlns:tns="http://localhost:8080" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:8080/types">
+      <s:include schemaLocation="xsd/employee.xsd"/>
+    </s:schema>
+  </types>
+  <message name="createEmployeeRequest">
+    <part element="xsd:CreateEmployeeRequest" name="in"/>
+  </message>
+  <message name="createEmployeeResponse">
+    <part element="xsd:CreateEmployeeResponse" name="out"/>
+  </message>
+  <message name="getEmployeeRequest">
+    <part element="xsd:GetEmployeeRequest" name="in"/>
+  </message>
+  <message name="getEmployeeResponse">
+    <part element="xsd:GetEmployeeHrResponse" name="out"/>
+  </message>
+  <portType name="EmployeeForHr">
+    <operation name="createEmployee">
+      <input name="createEmployeeRequest" message="tns:createEmployeeRequest"/>
+      <output name="createEmployeeResponse" message="tns:createEmployeeResponse"/>
+    </operation>
+    <operation name="getEmployee">
+      <input name="getEmployeeRequest" message="tns:getEmployeeRequest"/>
+      <output name="getEmployeeResponse" message="tns:getEmployeeResponse"/>
+    </operation>
+  </portType>
+  <binding name="EmployeeForHr_SOAPBinding" type="tns:EmployeeForHr">
+    <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" style="document"/>
+    <operation name="createEmployee">
+      <soap12:operation style="document" soapAction=""/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getEmployee">
+      <soap12:operation style="document" soapAction=""/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="EmployeeForHrService">
+    <port name="EmployeeForHrPort" binding="tns:EmployeeForHr_SOAPBinding">
+      <soap12:address location="http://localhost:8080/EmployeeForHr"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Bari\Training\EmployeeSOAP\WSDL3\xsd\employee.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://localhost:8080/types" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://localhost:8080/types" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
+  <simpleType name="String30">
+    <restriction base="string">
+      <maxLength value="30"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="String20">
+    <restriction base="string">
+      <maxLength value="20"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="String10">
+    <restriction base="string">
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <complexType name="SecurityInformation">
+    <sequence>
+      <element name="Department" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="Username" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="Password" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="SalaryDetails">
+    <sequence>
+      <element name="BasicPay" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+      <element name="HRA" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+      <element name="TravelAllowance" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+      <element name="MedicalAllowance" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="FileAttachment">
+    <sequence>
+      <element name="FileName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="FileContent" type="xmime:base64Binary" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="EmployeeWithoutSalary">
+    <sequence>
+      <element name="FirstName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="LastName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="DateOfBirth" type="xsd:String10" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeId" type="xsd:String10" minOccurs="0" maxOccurs="1"/>
+      <element name="ProfilePicture" type="xsd:FileAttachment" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="EmployeeWithSalary">
+    <sequence>
+      <element name="FirstName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="LastName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="DateOfBirth" type="xsd:String10" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeId" type="xsd:String10" minOccurs="0" maxOccurs="1"/>
+      <element name="ProfilePicture" type="xsd:FileAttachment" minOccurs="0" maxOccurs="1"/>
+      <element name="EmployeeSalaryDetails" type="xsd:SalaryDetails" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="CreateEmployeeRequestWithSecurity">
+    <sequence>
+      <element name="SecurityCredentials" type="xsd:SecurityInformation" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeWithoutSalary" type="xsd:EmployeeWithoutSalary" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <element name="CreateEmployeeRequest" type="xsd:CreateEmployeeRequestWithSecurity"/>
+  <element name="CreateEmployeeResponse" type="xsd:EmployeeWithoutSalary"/>
+  <complexType name="UpdateEmployeeSalaryRequestWithSecurity">
+    <sequence>
+      <element name="SecurityCredentials" type="xsd:SecurityInformation" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeWithSalary" type="xsd:EmployeeWithSalary" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <element name="UpdateEmployeeSalaryRequest" type="xsd:UpdateEmployeeSalaryRequestWithSecurity"/>
+  <element name="UpdateEmployeeSalaryResponse" type="xsd:EmployeeWithSalary"/>
+  <complexType name="GetEmployeeRequestWithSecurity">
+    <sequence>
+      <element name="SecurityCredentials" type="xsd:SecurityInformation" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeId" type="xsd:String10" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <element name="GetEmployeeRequest" type="xsd:GetEmployeeRequestWithSecurity"/>
+  <element name="GetEmployeeHrResponse" type="xsd:EmployeeWithoutSalary"/>
+  <element name="GetEmployeeAccountResponse" type="xsd:EmployeeWithSalary"/>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/EmployeeForHr</con:endpoint></con:endpoints><con:operation id="7099e06a-73d3-4be6-912f-f904590a12ce" isOneWay="false" action="" name="createEmployee" bindingOperationName="createEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e0a66904-6a2c-4ba9-976e-b81d2097bc55" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@inline-response-attachments">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@expand-mtom-attachments">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@disable-multipart-attachments">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">true</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@dump-file"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/EmployeeForHr</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://localhost:8080/types" xmlns:xm="http://www.w3.org/2005/05/xmlmime">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:CreateEmployeeRequest>\r
+         <typ:SecurityCredentials>\r
+            <!--type: String30-->\r
+            <typ:Department>gero et</typ:Department>\r
+            <!--type: String30-->\r
+            <typ:Username>sonoras imperio</typ:Username>\r
+            <!--type: String30-->\r
+            <typ:Password>quae divum incedo</typ:Password>\r
+         </typ:SecurityCredentials>\r
+         <typ:EmployeeWithoutSalary>\r
+            <!--type: String30-->\r
+            <typ:FirstName>verrantque per auras</typ:FirstName>\r
+            <!--type: String30-->\r
+            <typ:LastName>per auras</typ:LastName>\r
+            <!--type: String10-->\r
+            <typ:DateOfBirth>circum cla</typ:DateOfBirth>\r
+            <!--Optional:-->\r
+            <!--type: String10-->\r
+            <typ:EmployeeId>nimborum i</typ:EmployeeId>\r
+            <!--Optional:-->\r
+            <typ:ProfilePicture>\r
+               <!--type: String30-->\r
+               <typ:FileName>foedere certo</typ:FileName>\r
+               <typ:FileContent xm:contentType="application/?">cid:800346049842</typ:FileContent>\r
+            </typ:ProfilePicture>\r
+         </typ:EmployeeWithoutSalary>\r
+      </typ:CreateEmployeeRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>Test.class</con:name><con:contentType>application/octet-stream</con:contentType><con:size>2149</con:size><con:contentId>Test.class</con:contentId><con:part>800346049842</con:part><con:data>UEsDBBQACAgIAGSAJE8AAAAAAAAAAAAAAAAKAAAAVGVzdC5jbGFzc41VWVPbVhT+LhgkFCVQsycsJgsxi+M2rIWU4AWoawNu7dC4dBP2jRHYkivLBHffXvoD+tB/kfbBMGWmP6B/qG+dnisLF4gzk9GMzrn3bN8957vS3//++ReAWfysYByLEt6WsCRjWcYjBQN4R0ELViQ8lrEqI6RARlhGRMENRCWsCbku/DaE9q6CGN5TEEdCwqaCHmyJnW0FSbwv4QPhuCIj1YE0nkjYUTCERRkfCvlUvDIKPsKuglZ8LOMTIT+V8ZmEzxlaD3mVwZs40I60YEEz8sGUbelGfpnhesQ0yrZm2DtaocIZFN3Q7R2etU2Lof2RWK1QAv/EDoMnYubIpTOhG3yrUtzjVlrbK9COxI2sVS3ZDOP+l4tMNK2bsrXs4aZWclLQiSlLjrtZPEVNNxj6/LtNshEQJWVWrCxf10XxjjQv2w+En4opTDOMCf046OQyg+USzwZjR0nN0orc5laK1lRBBDF0ucB104gZ4tgMbU/S64FFFRr2RD7aGX05X4qQcjvOq/VsXRovrzUyxUWzW0NrKRGfY+ghNRgJR4LJeCQ1lwxFo7GtDRUczxi6L+WO6KV9bqnIY18A0FUc4FBCQUURJQlfqLBQdoPqTVk7znKnqAob0yoqeC7hWEUVewTravMY5JJWLj83rZyEL1V8ha8Z+q96hSt6Icdp/MPblp7XDa3gqxt8tulzG+YL+FR8g29VfIfvJfyg4kf8pCKINwme2wqeO48TzjOOKfSMRuBzB02wyXQJ5/beAXGPcOa5Ha7avCxY0IQEu2GalH83LNjQT7I5T65RlphD7ywRZeKV3LwyAKKnRxCfIeyP1WPKPFuxdLsapOEuX9lyGBEq5E1a7RcvEc1B4fE7cKWcuS6aSddKABdb9YNXbL0QDGtlPj9L1CbI1D/TGYDU0NSYYXArUqDpiZ4M+d1LdSH2rutM6AdeZWO4wR0tbZ4zok+AaXZDO0uk2M41TVuaaKDAFuXn2BpaUzCutSmYRmR7ztEuM7VatnmRLpBZoQH01jPrZjBZR2NxrUhJ27VSiRt0uQKv9cFxKU2Bst04eY+/6bm7m1Sk4zrdKNBXqbdZxR2M0Qd3nH4GLbiJ+/CD+OasOmg9eWHtoYeJDxW9A7QzTJKRbJs8AfudFIYH9G53NlUKpzvluv5KoW0kN87QkvF6vG01tJ9ASpxBzng7nKVXOcG1Ta96iutbAc/0VA2dgckaump4Y8lzCu+gp4buFwna72UvnBKPsUr/mhan6DiVA7rRSTs+9NG6nwoPYoHOsIpbCNFvZg0jeIu8ZLB/sCrhIcXMNCD+5kKMvybEtjrEU/QRyn4H5RkGMoOeEwxeghlB9ArM2wTzDsG8R+txKn4fS9TiKDV7jdobI88GzGgd5izmXJi/0LA8JDPem4k/cOsMQ5kTDHtHahilmqM1+GoYmzrF7c0L1jtkmW5Yp09xd+uC9R5ZAg3r/4McgUTvh1Rwhro3SzyZI6Dz1PcFPMUiHWne4cUCTJJe0uIE3iC4SZJH6PgPUEsHCMt6eXl2BAAAZQgAAFBLAQIUABQACAgIAGSAJE/Lenl5dgQAAGUIAAAKAAAAAAAAAAAAAAAAAAAAAABUZXN0LmNsYXNzUEsFBgAAAAABAAEAOAAAAK4EAAAAAA==</con:data><con:id>a4454de1-3172-413b-91cc-c5b22c252538</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:8080/EmployeeForHr/createEmployeeRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d354a4ce-09af-4eff-893f-28b8acd7e407" isOneWay="false" action="" name="getEmployee" bindingOperationName="getEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8997fb14-ceaf-4776-80e3-1606f8da5760" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/EmployeeForHr</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://localhost:8080/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:GetEmployeeRequest>\r
+         <typ:SecurityCredentials>\r
+            <!--type: String30-->\r
+            <typ:Department>gero et</typ:Department>\r
+            <!--type: String30-->\r
+            <typ:Username>sonoras imperio</typ:Username>\r
+            <!--type: String30-->\r
+            <typ:Password>quae divum incedo</typ:Password>\r
+         </typ:SecurityCredentials>\r
+         <!--type: String10-->\r
+         <typ:EmployeeId>verrantque</typ:EmployeeId>\r
+      </typ:GetEmployeeRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:8080/EmployeeForHr/getEmployeeRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

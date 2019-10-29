@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="cae66a3a-4978-426c-b4f1-f471b6cfede7" activeEnvironment="Default" name="EmployeeForAccounts3" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a8b10c51-78b3-40e2-8a44-77ea9fe3bde0" wsaVersion="NONE" name="EmployeeForAccounts_SOAPBinding" type="wsdl" bindingName="{http://localhost:8080}EmployeeForAccounts_SOAPBinding" soapVersion="1_2" anonymous="optional" definition="file:/C:/Bari/Training/EmployeeSOAP/WSDL3/employee_for_accounts.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Bari\Training\EmployeeSOAP\WSDL3\employee_for_accounts.wsdl"><con:part><con:url>file:\C:\Bari\Training\EmployeeSOAP\WSDL3\employee_for_accounts.wsdl</con:url><con:content><![CDATA[<definitions name="EmployeeForHr" targetNamespace="http://localhost:8080" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://localhost:8080/types" xmlns:tns="http://localhost:8080" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:8080/types">
+      <s:include schemaLocation="xsd/employee.xsd"/>
+    </s:schema>
+  </types>
+  <message name="updateEmployeeSalaryRequest">
+    <part element="xsd:UpdateEmployeeSalaryRequest" name="in"/>
+  </message>
+  <message name="updateEmployeeSalaryResponse">
+    <part element="xsd:UpdateEmployeeSalaryResponse" name="out"/>
+  </message>
+  <message name="getEmployeeRequest">
+    <part element="xsd:GetEmployeeRequest" name="in"/>
+  </message>
+  <message name="getEmployeeResponse">
+    <part element="xsd:GetEmployeeAccountResponse" name="out"/>
+  </message>
+  <portType name="EmployeeForAccounts">
+    <operation name="updateEmployeeSalary">
+      <input name="updateEmployeeSalaryRequest" message="tns:updateEmployeeSalaryRequest"/>
+      <output name="updateEmployeeSalaryResponse" message="tns:updateEmployeeSalaryResponse"/>
+    </operation>
+    <operation name="getEmployee">
+      <input name="getEmployeeRequest" message="tns:getEmployeeRequest"/>
+      <output name="getEmployeeResponse" message="tns:getEmployeeResponse"/>
+    </operation>
+  </portType>
+  <binding name="EmployeeForAccounts_SOAPBinding" type="tns:EmployeeForAccounts">
+    <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" style="document"/>
+    <operation name="updateEmployeeSalary">
+      <soap12:operation style="document" soapAction=""/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getEmployee">
+      <soap12:operation style="document" soapAction=""/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="EmployeeForAccountsService">
+    <port name="EmployeeForAccountsPort" binding="tns:EmployeeForAccounts_SOAPBinding">
+      <soap12:address location="http://localhost:8080/EmployeeForAccounts"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Bari\Training\EmployeeSOAP\WSDL3\xsd\employee.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://localhost:8080/types" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://localhost:8080/types" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
+  <simpleType name="String30">
+    <restriction base="string">
+      <maxLength value="30"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="String20">
+    <restriction base="string">
+      <maxLength value="20"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="String10">
+    <restriction base="string">
+      <maxLength value="10"/>
+    </restriction>
+  </simpleType>
+  <complexType name="SecurityInformation">
+    <sequence>
+      <element name="Department" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="Username" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="Password" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="SalaryDetails">
+    <sequence>
+      <element name="BasicPay" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+      <element name="HRA" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+      <element name="TravelAllowance" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+      <element name="MedicalAllowance" type="xsd:String20" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="FileAttachment">
+    <sequence>
+      <element name="FileName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="FileContent" type="xmime:base64Binary" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="EmployeeWithoutSalary">
+    <sequence>
+      <element name="FirstName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="LastName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="DateOfBirth" type="xsd:String10" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeId" type="xsd:String10" minOccurs="0" maxOccurs="1"/>
+      <element name="ProfilePicture" type="xsd:FileAttachment" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="EmployeeWithSalary">
+    <sequence>
+      <element name="FirstName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="LastName" type="xsd:String30" minOccurs="1" maxOccurs="1"/>
+      <element name="DateOfBirth" type="xsd:String10" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeId" type="xsd:String10" minOccurs="0" maxOccurs="1"/>
+      <element name="ProfilePicture" type="xsd:FileAttachment" minOccurs="0" maxOccurs="1"/>
+      <element name="EmployeeSalaryDetails" type="xsd:SalaryDetails" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="CreateEmployeeRequestWithSecurity">
+    <sequence>
+      <element name="SecurityCredentials" type="xsd:SecurityInformation" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeWithoutSalary" type="xsd:EmployeeWithoutSalary" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <element name="CreateEmployeeRequest" type="xsd:CreateEmployeeRequestWithSecurity"/>
+  <element name="CreateEmployeeResponse" type="xsd:EmployeeWithoutSalary"/>
+  <complexType name="UpdateEmployeeSalaryRequestWithSecurity">
+    <sequence>
+      <element name="SecurityCredentials" type="xsd:SecurityInformation" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeWithSalary" type="xsd:EmployeeWithSalary" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <element name="UpdateEmployeeSalaryRequest" type="xsd:UpdateEmployeeSalaryRequestWithSecurity"/>
+  <element name="UpdateEmployeeSalaryResponse" type="xsd:EmployeeWithSalary"/>
+  <complexType name="GetEmployeeRequestWithSecurity">
+    <sequence>
+      <element name="SecurityCredentials" type="xsd:SecurityInformation" minOccurs="1" maxOccurs="1"/>
+      <element name="EmployeeId" type="xsd:String10" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <element name="GetEmployeeRequest" type="xsd:GetEmployeeRequestWithSecurity"/>
+  <element name="GetEmployeeHrResponse" type="xsd:EmployeeWithoutSalary"/>
+  <element name="GetEmployeeAccountResponse" type="xsd:EmployeeWithSalary"/>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/EmployeeForAccounts</con:endpoint></con:endpoints><con:operation id="24a4ec92-a3d4-4caa-902a-5fbebe3df6b6" isOneWay="false" action="" name="getEmployee" bindingOperationName="getEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="46eaed92-ef7e-4fcc-9b64-c726f0e22f5a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/EmployeeForAccounts</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://localhost:8080/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:GetEmployeeRequest>\r
+         <typ:SecurityCredentials>\r
+            <!--type: String30-->\r
+            <typ:Department>gero et</typ:Department>\r
+            <!--type: String30-->\r
+            <typ:Username>sonoras imperio</typ:Username>\r
+            <!--type: String30-->\r
+            <typ:Password>quae divum incedo</typ:Password>\r
+         </typ:SecurityCredentials>\r
+         <!--type: String10-->\r
+         <typ:EmployeeId>verrantque</typ:EmployeeId>\r
+      </typ:GetEmployeeRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:8080/EmployeeForAccounts/getEmployeeRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bce150ad-c1e7-48c2-988f-df625062f945" isOneWay="false" action="" name="updateEmployeeSalary" bindingOperationName="updateEmployeeSalary" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34db6263-ac37-4024-a006-e944001e66c6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/EmployeeForAccounts</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://localhost:8080/types" xmlns:xm="http://www.w3.org/2005/05/xmlmime">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:UpdateEmployeeSalaryRequest>\r
+         <typ:SecurityCredentials>\r
+            <!--type: String30-->\r
+            <typ:Department>gero et</typ:Department>\r
+            <!--type: String30-->\r
+            <typ:Username>sonoras imperio</typ:Username>\r
+            <!--type: String30-->\r
+            <typ:Password>quae divum incedo</typ:Password>\r
+         </typ:SecurityCredentials>\r
+         <typ:EmployeeWithSalary>\r
+            <!--type: String30-->\r
+            <typ:FirstName>verrantque per auras</typ:FirstName>\r
+            <!--type: String30-->\r
+            <typ:LastName>per auras</typ:LastName>\r
+            <!--type: String10-->\r
+            <typ:DateOfBirth>circum cla</typ:DateOfBirth>\r
+            <!--Optional:-->\r
+            <!--type: String10-->\r
+            <typ:EmployeeId>nimborum i</typ:EmployeeId>\r
+            <!--Optional:-->\r
+            <typ:ProfilePicture>\r
+               <!--type: String30-->\r
+               <typ:FileName>foedere certo</typ:FileName>\r
+               <typ:FileContent xm:contentType="application/?">cid:132716493425</typ:FileContent>\r
+            </typ:ProfilePicture>\r
+            <typ:EmployeeSalaryDetails>\r
+               <!--type: String20-->\r
+               <typ:BasicPay>profundum quippe fer</typ:BasicPay>\r
+               <!--type: String20-->\r
+               <typ:HRA>et carcere</typ:HRA>\r
+               <!--type: String20-->\r
+               <typ:TravelAllowance>iovis rapidum iacula</typ:TravelAllowance>\r
+               <!--type: String20-->\r
+               <typ:MedicalAllowance>speluncis abdidit</typ:MedicalAllowance>\r
+            </typ:EmployeeSalaryDetails>\r
+         </typ:EmployeeWithSalary>\r
+      </typ:UpdateEmployeeSalaryRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:8080/EmployeeForAccounts/updateEmployeeSalaryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

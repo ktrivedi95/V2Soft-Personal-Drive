@@ -1,5 +1,5 @@
 10/21:
-	Developed Servlet Filter to allow accessing pages only when an login session exists in the Database
+	Developed Servlet Filter to allow accessing pages only when a login session exists in the Database
 	Developed a Logging out functionality that terminates current session and marks the appropriate columns in the Database
 	Began learning the basics of Spring Boot from a crash course on youtube
 10/22:
@@ -7,9 +7,16 @@
 	Downloaded some Spring Boot apps to test and learn the differences between them and vanilla Maven projects
 	Began converting our EmployeePortal project from a Maven build to a Spring Boot web application
 10/23:
-	
+	Successfully converted EmployeePortal project to EmployeePortalBoot (Spring Boot) project
+		Fixed all errors and bugs related to beans by adding the appropriate properties in the application.properties file
+		Updated queries for logout and retrieving login session information since they resulted in false outputs during random executions
+	Assisted in the Qwik Events Mobile App production and demo testing
 10/24:
 	Began learning SOAP Web Services through a series of tutorials online
-	Assisted in the Qwik Events App production and demo testing
+	Further assisted in the Qwik Events Mobile App production and demo testing by keeping notes of each bug/error to fix
 10/25:
-	Worked on creating a Web Servlet Filter to restrict access to all the web pages unless a valid login session id is present and the status of the session is active (not terminated)
+	Completed SOAP Web Services series and tested sample WSDL and Java code provided by the instructor
+	Began preparing for Coding Test from RouteOne
+		Learned several new concepts of ECMAScript 6 compared to ES5 and played around with sample code
+		Solved several common coding problems found over multiple websites using both Java and ES6 to increase familiarity with the 2 languages
+
