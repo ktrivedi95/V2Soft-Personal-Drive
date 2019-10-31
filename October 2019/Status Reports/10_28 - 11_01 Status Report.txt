@@ -3,14 +3,16 @@
 	Began Implementing Employee WSDL into SoapUI and generating sample code for java
 	Practiced programming in core java to revisit some of the basic concepts in the language
 10/29:
-	Further learned Spring Boot by completing 2 more tutorial courses on youtube
-	Downloaded some Spring Boot apps to test and learn the differences between them and vanilla Maven projects
-	Began converting our EmployeePortal project from a Maven build to a Spring Boot web application
+	Analyzed the generated code from SoapUI and modified according to our specifications
+	Tested receiving the SOAP response by starting the server and creating test request in SoapUI
+	Opened and converted the java files into a webapp using STS to test the SOAP responses on a tomcat server
+		Note: Needed to start the server on a different port than what the responses would be received on due to binding issue in java
 10/30:
-	Successfully converted EmployeePortal project to EmployeePortalBoot (Spring Boot) project
-		Fixed all errors and bugs related to beans by adding the appropriate properties in the application.properties file
-		Updated queries for logout and retrieving login session information since they resulted in false outputs during random executions
-	Assisted in the Qwik Events Mobile App production and demo testing
+	Played around with different ports as an attempt to get the Tomcat server port and the response port to be the same
+		Largest reason for this was to check and see if I could run both EmployeePortal and Employee WSDL projects parallelly
+	Setup latest NodeJS and executed various npm commands to begin learning Angular 8
+		Created sample project to view the several components that generally play a role in an Angular 8 project
+	Began watching a tutorial series to learn the basics of Angular 8 by creating a couple different example projects
 10/31:
 	Began learning SOAP Web Services through a series of tutorials online
 	Further assisted in the Qwik Events Mobile App production and demo testing by keeping notes of each bug/error to fix

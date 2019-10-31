@@ -204,3 +204,16 @@ git remote -v
 git add .
 git commit -m "SOAP Basic Response Working"
 git push origin master -f
+git remote -v
+git remote add myorigin https://github.com/ktrivedi95/V2Soft_Personal_Drive.git
+git remote -v
+git remote remove origin
+clear
+git remote -v
+git add .
+git commit -m "Random Update"
+git push myorigin master -f
+git remote -v
+git add .
+git commit -m "Small update"
+git push origin master -f
