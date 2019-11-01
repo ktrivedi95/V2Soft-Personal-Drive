@@ -217,3 +217,11 @@ git remote -v
 git add .
 git commit -m "Small update"
 git push origin master -f
+git remote -v
+git add .
+git commit -m "Status Reports Update"
+git push myorigin master -f
+ls
+clear
+git remote -v
+git add .

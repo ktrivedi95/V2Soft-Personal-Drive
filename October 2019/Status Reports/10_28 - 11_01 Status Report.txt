@@ -14,11 +14,10 @@
 		Created sample project to view the several components that generally play a role in an Angular 8 project
 	Began watching a tutorial series to learn the basics of Angular 8 by creating a couple different example projects
 10/31:
-	Began learning SOAP Web Services through a series of tutorials online
-	Further assisted in the Qwik Events Mobile App production and demo testing by keeping notes of each bug/error to fix
+	Completed watching the tutorial series on the basics of Angular 8 and completed 2 example projects as the instructor guided to
+	Began reading Angular 8 documentation to get a deeper understanding of all the components in Angular 8 and TypeScript
 11/01:
-	Completed SOAP Web Services series and tested sample WSDL and Java code provided by the instructor
-	Began preparing for Coding Test from RouteOne
-		Learned several new concepts of ECMAScript 6 compared to ES5 and played around with sample code
-		Solved several common coding problems found over multiple websites using both Java and ES6 to increase familiarity with the 2 languages
+	Learned TypeScript and JavaScript by solving sample practice problems found on google and other forums
+	Watched and followed a series on Angular 8 in which the instructor created a decent sized project covering various concepts of Angular 8
+		Edited and played around with some of the code from the project
 
