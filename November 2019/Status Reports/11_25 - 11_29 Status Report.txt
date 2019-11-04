@@ -1,0 +1,11 @@
+11/25:
+	Learned how to use SoapUI application by watching sample project creations on youtube
+11/26:
+	Analyzed the generated code from SoapUI and modified according to our specifications
+11/27:
+	Played around with different ports as an attempt to get the Tomcat server port and the response port to be the same
+11/28:
+	Completed watching the tutorial series on the basics of Angular 8 and completed 2 example projects as the instructor guided to
+11/29:
+	Learned TypeScript and JavaScript by solving sample practice problems found on google and other forums
+

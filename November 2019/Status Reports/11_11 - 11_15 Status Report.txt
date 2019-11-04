@@ -1,0 +1,10 @@
+11/11:
+	Created 2 more tables called employee_login & login_session; Populated the tables with appropriate data relating the other tables
+11/12:
+	Reconfigured the Hibernate configuration and generated new datamodels that included employee login information as well
+11/13:
+	Created DAO and Controller methods for login processes and to view different pages once successfully logged in
+11/14:
+	Continued working on different styles of queries (encountered a few errors and bugs on the way but resolved most of them by the help of Bharthesh and StackoverFlow)
+11/15:
+	Worked on creating a Web Servlet Filter to restrict access to all the web pages unless a valid login session id is present and the status of the session is active (not terminated)

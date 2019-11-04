@@ -1,0 +1,12 @@
+11/04:
+	Began creating the front end for the Employee Portal Web App using Angular 8
+		Worked on the login page with a fully functional form element and other elements using ngModule support to capture live data from the form
+		Learned about both types of binding: data and two-way
+11/05:
+	Downloaded HeidiSQL for MariaDB and created a sample database called Employee
+11/06:
+	Completed a Java Spring course on udemy.com and learned different concepts in Spring such as Dependency Injection, Java/XML Configuration, MVC, MVC Test, and JPA
+11/07:
+	Continued with Day 2’s Hibernate configuration, created a successful connection to the Employee DB, and developed the model and entity classes.
+11/08:
+	Continued with DAO and controller to add further features such as adding new employees to the DB and updating current employees’ information

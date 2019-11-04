@@ -225,3 +225,7 @@ ls
 clear
 git remote -v
 git add .
+git remote -v
+git add .
+git commit -m "Status Report update"
+git push myorigin master -f

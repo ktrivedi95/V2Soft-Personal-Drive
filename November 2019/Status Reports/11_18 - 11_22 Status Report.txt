@@ -1,0 +1,11 @@
+11/18:
+	Developed Servlet Filter to allow accessing pages only when a login session exists in the Database
+11/19:
+	Further learned Spring Boot by completing 2 more tutorial courses on youtube
+11/20:
+	Successfully converted EmployeePortal project to EmployeePortalBoot (Spring Boot) project
+11/21:
+	Began learning SOAP Web Services through a series of tutorials online
+11/22:
+	Completed SOAP Web Services series and tested sample WSDL and Java code provided by the instructor
+
