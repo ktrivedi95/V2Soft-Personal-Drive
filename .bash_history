@@ -229,3 +229,36 @@ git remote -v
 git add .
 git commit -m "Status Report update"
 git push myorigin master -f
+git remote -v
+ls
+clear
+git add .
+git commit -m "Status Report and Qwik Events update"
+git push myorigin master -f
+clear
+git
+clear
+git remote -v
+clear
+git init
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/ktrivedi95/V2Soft_Angular.git
+git remote -v
+clear
+git add .
+git push origin master -f
+clear
+git init
+clear
+git add .
+git commit -m "First Commit"
+git remote -v
+git remote remove origin
+git remote -v
+clear
+git remote add origin https://github.com/ktrivedi95/V2Soft_Angular.git
+git remote -v
+clear
+git add .
+git push origin master -f
